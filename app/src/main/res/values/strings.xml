@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KelompokSatuAdmin</string>
+    <string name="kelompok_satu_admin">Kelompok Satu (Admin)</string>
 </resources>
