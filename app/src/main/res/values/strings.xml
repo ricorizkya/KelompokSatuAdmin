@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">KelompokSatuAdmin</string>
     <string name="kelompok_satu_admin">Kelompok Satu (Admin)</string>
+    <string name="kelompok">Kelompok</string>
+    <string name="satu">Satu</string>
+    <string name="admin">ADMIN</string>
+    <string name="login_with_google">Login with Google</string>
 </resources>
