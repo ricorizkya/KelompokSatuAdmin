@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".paket.TambahPaketActivity">
+    tools:context=".paket.EditHapusPaketActivity">
 
     <View
         android:id="@+id/bg_header"
@@ -16,10 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/tv_tambah_paket"
+        android:id="@+id/tv_edit_paket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tambah_paket_pendakian"
+        android:text="@string/edit_hapus_paket"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="24sp"
@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="@id/bg_header"
         app:layout_constraintTop_toTopOf="@id/bg_header"
         app:layout_constraintBottom_toBottomOf="@id/bg_header" />
-    
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_nama_paket"
         android:layout_width="match_parent"
@@ -137,7 +137,7 @@
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_alamat_paket" />
-    
+
     <ImageButton
         android:id="@+id/btn_image"
         android:layout_width="match_parent"
@@ -160,10 +160,10 @@
         app:layout_constraintBottom_toBottomOf="@id/btn_image" />
 
     <Button
-        android:id="@+id/btn_add"
+        android:id="@+id/btn_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tambah"
+        android:text="@string/update"
         android:backgroundTint="@color/teal_500"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
@@ -171,4 +171,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_image"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:backgroundTint="@color/red"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_edit"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

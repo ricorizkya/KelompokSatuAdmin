@@ -1,12 +1,12 @@
-package com.example.kelompoksatuadmin.activity
+package com.example.kelompoksatuadmin.paket
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kelompoksatuadmin.R
 
-class TambahPaketActivity : AppCompatActivity() {
+class EditHapusPaketActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tambah_paket)
+        setContentView(R.layout.activity_edit_hapus_paket)
     }
 }

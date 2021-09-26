@@ -18,4 +18,22 @@
     <string name="jawa_tengah">Jawa Tengah</string>
     <string name="rp_500_000">Rp 500.000,-</string>
     <string name="_3d_2n">3D 2N</string>
+    <string name="tambah_paket_pendakian">Tambah Paket Pendakian</string>
+    <string name="nama_paket">Nama Paket</string>
+    <string name="durasi">Durasi</string>
+    <string name="domisili">Domisili</string>
+    <string name="harga">Harga</string>
+    <string name="alamat_lengkap">Alamat Lengkap</string>
+    <string name="pilih_gambar_untuk_poster">Pilih Gambar untuk Poster</string>
+    <string name="tambah">Tambah</string>
+    <string name="edit_hapus_paket">Edit/Hapus Paket</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="nama_user">Nama User</string>
+    <string name="status">Status</string>
+    <string name="daftar_pesanan">Daftar Pesanan</string>
+    <string name="nama_user">Nama User</string>
+    <string name="nomor_hp">082144285606</string>
+    <string name="email">kelompoksatu@gmail.com</string>
+    <string name="daftar_user">Daftar User</string>
 </resources>
