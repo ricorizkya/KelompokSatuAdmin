@@ -5,4 +5,17 @@
     <string name="satu">Satu</string>
     <string name="admin">ADMIN</string>
     <string name="login_with_google">Login with Google</string>
+    <string name="paket">Paket</string>
+    <string name="pesanan">Pesanan</string>
+    <string name="user">User</string>
+    <string name="guide">Guide</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="halo_admin">Halo, Admin!</string>
+    <string name="logout">Logout</string>
+    <string name="tambah_paket">Tambah Paket</string>
+    <string name="merbabu_via_selo">Merbabu via Selo</string>
+    <string name="jawa_tengah">Jawa Tengah</string>
+    <string name="rp_500_000">Rp 500.000,-</string>
+    <string name="_3d_2n">3D 2N</string>
 </resources>

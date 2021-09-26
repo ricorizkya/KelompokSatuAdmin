@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".activity.LoginActivity">
 
     <ImageView
         android:id="@+id/img_logo"
@@ -62,7 +62,8 @@
         android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_admin">
+        app:layout_constraintTop_toBottomOf="@id/tv_admin"
+        tools:ignore="OnClick">
 
         <ImageView
             android:id="@+id/img_google"

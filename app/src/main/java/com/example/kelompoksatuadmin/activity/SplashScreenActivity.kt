@@ -1,10 +1,10 @@
-package com.example.kelompoksatuadmin
+package com.example.kelompoksatuadmin.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import androidx.core.os.HandlerCompat.postDelayed
+import android.view.WindowManager
 import com.example.kelompoksatuadmin.databinding.ActivitySplashScreenBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -18,7 +18,7 @@ class SplashScreenActivity : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        actionBar?.hide()
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         auth = FirebaseAuth.getInstance()
         val user = auth.currentUser
@@ -26,16 +26,18 @@ class SplashScreenActivity : AppCompatActivity() {
         binding.splashSreen.alpha = 0f
         binding.splashSreen.animate().setDuration(1500).alpha(1f).withEndAction {
             Handler().postDelayed({
-                                  if (user != null) {
-                                      startActivity(Intent(this, MainActivity::class.java))
-                                      overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-                                      finish()
-                                  }else {
-                                      startActivity(Intent(this, MainActivity::class.java))
-                                      overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-                                      finish()
-                                  }
-            },200)
+                if (user != null) {
+                    val dashboard = Intent(this, MainActivity::class.java)
+                    startActivity(dashboard)
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    finish()
+                }else {
+                    val login = Intent(this, LoginActivity::class.java)
+                    startActivity(login)
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    finish()
+                }
+            },2000)
         }
     }
 }
