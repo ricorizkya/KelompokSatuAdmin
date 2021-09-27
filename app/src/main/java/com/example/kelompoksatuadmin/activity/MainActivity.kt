@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
-import com.example.kelompoksatuadmin.paket.PaketFragment
+import com.example.kelompoksatuadmin.paket.ui.PaketFragment
 import com.example.kelompoksatuadmin.R
 import com.example.kelompoksatuadmin.databinding.ActivityMainBinding
 import com.example.kelompoksatuadmin.guide.GuideFragment

@@ -7,6 +7,7 @@ class Paket {
     var durasi: String? = null
     var harga: String? = null
     var alamatlengkap: String? = null
+    var deskripsi: String? = null
     var imagePoster: String? = null
 
     constructor() {}
@@ -18,6 +19,7 @@ class Paket {
         durasi: String?,
         harga: String?,
         alamatlengkap: String?,
+        deskripsi: String?,
         imagePoster: String?
     ) {
         this.id = id
@@ -26,6 +28,7 @@ class Paket {
         this.durasi = durasi
         this.harga = harga
         this.alamatlengkap = alamatlengkap
+        this.deskripsi = deskripsi
         this.imagePoster = imagePoster
     }
 }

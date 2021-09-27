@@ -1,4 +1,4 @@
-package com.example.kelompoksatuadmin.paket
+package com.example.kelompoksatuadmin.paket.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kelompoksatuadmin.R
 import com.example.kelompoksatuadmin.databinding.FragmentPaketBinding
 import com.example.kelompoksatuadmin.paket.adapter.PaketAdapter
 import com.example.kelompoksatuadmin.paket.model.Paket

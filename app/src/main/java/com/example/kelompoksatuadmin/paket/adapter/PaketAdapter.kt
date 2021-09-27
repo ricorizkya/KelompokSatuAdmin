@@ -1,11 +1,13 @@
 package com.example.kelompoksatuadmin.paket.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.kelompoksatuadmin.databinding.ListPaketBinding
 import com.example.kelompoksatuadmin.paket.model.Paket
+import com.example.kelompoksatuadmin.paket.ui.DetailPaketActivity
 
 class PaketAdapter(private val listPaket: ArrayList<Paket>): RecyclerView.Adapter<PaketAdapter.PaketViewHolder>() {
 
@@ -19,6 +21,11 @@ class PaketAdapter(private val listPaket: ArrayList<Paket>): RecyclerView.Adapte
                 Glide.with(itemView.context)
                     .load(paket.imagePoster)
                     .into(imgPoster)
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailPaketActivity::class.java)
+                    intent.putExtra(DetailPaketActivity.EXTRA_ID, paket.id)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
     }
