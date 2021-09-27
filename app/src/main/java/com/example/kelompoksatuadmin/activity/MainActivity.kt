@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import com.example.kelompoksatuadmin.paket.PaketFragment
 import com.example.kelompoksatuadmin.R
 import com.example.kelompoksatuadmin.databinding.ActivityMainBinding
+import com.example.kelompoksatuadmin.guide.GuideFragment
 import com.example.kelompoksatuadmin.pesanan.PesananFragment
+import com.example.kelompoksatuadmin.user.UserFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,12 +24,16 @@ class MainActivity : AppCompatActivity() {
 
         val paketFragment = PaketFragment()
         val pesananFragment = PesananFragment()
+        val userFragment = UserFragment()
+        val guideFragment = GuideFragment()
 
         makeCurrentFragment(paketFragment)
         binding.bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.paket_menu -> makeCurrentFragment(paketFragment)
                 R.id.pesanan_menu -> makeCurrentFragment(pesananFragment)
+                R.id.user_menu -> makeCurrentFragment(userFragment)
+                R.id.guide_menu -> makeCurrentFragment(guideFragment)
             }
             true
         }

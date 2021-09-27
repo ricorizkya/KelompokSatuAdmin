@@ -29,11 +29,18 @@
     <string name="edit_hapus_paket">Edit/Hapus Paket</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
-    <string name="nama_user">Nama User</string>
     <string name="status">Status</string>
     <string name="daftar_pesanan">Daftar Pesanan</string>
     <string name="nama_user">Nama User</string>
     <string name="nomor_hp">082144285606</string>
     <string name="email">kelompoksatu@gmail.com</string>
     <string name="daftar_user">Daftar User</string>
+    <string name="daftar_guide">Daftar Guide</string>
+    <string name="tambah_guide">Tambah Guide</string>
+    <string name="nama_guide">Nama Guide</string>
+    <string name="nomor_telepon">Nomor Telepon</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="pilih_gambar_untuk_foto_profil">Pilih Gambar untuk Foto Profil</string>
+    <string name="masukkan_foto_ktp">Masukkan Foto KTP</string>
+    <string name="edit_data_guide">Edit Data Guide</string>
 </resources>
