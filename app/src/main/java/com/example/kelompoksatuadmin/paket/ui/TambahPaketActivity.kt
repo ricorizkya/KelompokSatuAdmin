@@ -57,7 +57,6 @@ class TambahPaketActivity : AppCompatActivity() {
     }
 
     private fun tambahPaket(image: String) {
-
         if (binding.edtNamaPaket.text.toString().isEmpty() && binding.edtDomisiliPaket.text.toString().isEmpty() && binding.edtDurasiPaket.text.toString().isEmpty() && binding.edtHargaPaket.text.toString().isEmpty() && binding.edtAlamatPaket.text.toString().isEmpty() && binding.edtDeskripsiPaket.text.toString().isEmpty() && image.isEmpty()) {
             binding.edtNamaPaket.error = "Form tidak boleh kosong"
             binding.edtDomisiliPaket.error = "Form tidak boleh kosong"
