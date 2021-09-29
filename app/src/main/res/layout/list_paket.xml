@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:text="@string/jawa_tengah"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:layout_marginStart="10dp"
             app:layout_constraintStart_toEndOf="@id/img_poster"
             app:layout_constraintTop_toBottomOf="@id/tv_gunung" />
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:text="@string/_3d_2n"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:layout_marginStart="10dp"
             app:layout_constraintStart_toEndOf="@id/img_poster"
             app:layout_constraintTop_toBottomOf="@id/tv_domisili" />

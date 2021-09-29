@@ -11,9 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KelompokSatuAdmin">
-        <activity android:name=".paket.ui.DetailPaketActivity"></activity>
-        <activity android:name=".guide.EditGuideActivity" />
-        <activity android:name=".guide.TambahGuideActivity" />
+        <activity android:name=".guide.ui.DetailGuideActivity"></activity>
+        <activity android:name=".paket.ui.DetailPaketActivity" />
+        <activity android:name=".guide.ui.EditGuideActivity" />
+        <activity android:name=".guide.ui.TambahGuideActivity" />
         <activity android:name=".paket.ui.EditPaketActivity" />
         <activity android:name=".paket.ui.TambahPaketActivity" />
         <activity android:name=".activity.LoginActivity" />

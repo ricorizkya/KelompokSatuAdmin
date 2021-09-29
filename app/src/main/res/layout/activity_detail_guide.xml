@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".paket.ui.DetailPaketActivity">
+    tools:context=".guide.ui.DetailGuideActivity">
 
     <ImageView
-        android:id="@+id/img_poster"
+        android:id="@+id/img_profile"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:src="@drawable/ic_mountains"
+        android:src="@drawable/ic_user"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -19,42 +19,42 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/tv_nama_paket"
-        android:layout_width="0dp"
+        android:id="@+id/tv_nama"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nama_paket"
+        android:text="@string/nama_guide"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:ellipsize="end"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_profile" />
+
+    <TextView
+        android:id="@+id/tv_nomor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nomor_hp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_poster"
+        app:layout_constraintTop_toBottomOf="@id/tv_nomor"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_domisili"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/domisili"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_nama_paket" />
-
-    <TextView
-        android:id="@+id/tv_durasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/durasi"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_alamat" />
 
     <TextView
         android:id="@+id/tv_alamat"
@@ -62,62 +62,13 @@
         android:layout_height="wrap_content"
         android:text="@string/alamat_lengkap"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:ellipsize="end"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_domisili"
+        app:layout_constraintTop_toBottomOf="@id/tv_email"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_deskripsi"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/deskripsi"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:ellipsize="end"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_durasi"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_rp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rp"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi" />
-
-    <TextView
-        android:id="@+id/tv_harga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_1000000"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginStart="5dp"
-        app:layout_constraintStart_toEndOf="@id/tv_rp"
-        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi" />
-
-    <TextView
-        android:id="@+id/tv_koma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/koma"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/tv_harga"
-        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi" />
 
     <Button
         android:id="@+id/btn_update"
@@ -125,11 +76,11 @@
         android:layout_height="wrap_content"
         android:text="@string/update"
         android:backgroundTint="@color/teal_500"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_harga"
+        app:layout_constraintTop_toBottomOf="@id/tv_alamat"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
@@ -143,5 +94,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_update"
         app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

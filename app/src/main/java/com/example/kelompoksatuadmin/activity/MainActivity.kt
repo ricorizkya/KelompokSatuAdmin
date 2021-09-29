@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import com.example.kelompoksatuadmin.paket.ui.PaketFragment
 import com.example.kelompoksatuadmin.R
 import com.example.kelompoksatuadmin.databinding.ActivityMainBinding
-import com.example.kelompoksatuadmin.guide.GuideFragment
+import com.example.kelompoksatuadmin.guide.ui.GuideFragment
 import com.example.kelompoksatuadmin.pesanan.PesananFragment
 import com.example.kelompoksatuadmin.user.UserFragment
 
