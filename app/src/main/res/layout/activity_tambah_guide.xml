@@ -50,6 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="40"
+            android:inputType="text"
             android:hint="@string/nama_guide" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,7 +69,8 @@
             android:id="@+id/edt_nomor_guide"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="40"
+            android:ems="20"
+            android:inputType="number"
             android:hint="@string/nomor_telepon" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,8 +90,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="40"
+            android:inputType="textEmailAddress"
             android:hint="@string/e_mail" />
     </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_umur_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_email_guide"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_umur_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="2"
+                android:hint="@string/umur" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_alamat_guide"
@@ -99,7 +122,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_email_guide"
+        app:layout_constraintTop_toBottomOf="@id/input_umur_guide"
         app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -111,6 +134,26 @@
             android:hint="@string/alamat_lengkap" />
     </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_moto_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_alamat_guide"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_moto_guide"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:inputType="textMultiLine"
+                android:ems="40"
+                android:hint="@string/motto" />
+        </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/tv_gambar"
         android:layout_width="wrap_content"
@@ -121,7 +164,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_alamat_guide" />
+        app:layout_constraintTop_toBottomOf="@id/input_moto_guide" />
 
     <ImageButton
         android:id="@+id/btn_image_profile"
@@ -156,27 +199,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_image_profile" />
 
-    <ImageButton
-        android:id="@+id/btn_image_ktp"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:src="@drawable/poster_image"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_ktp"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_poster_ktp"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/ic_image"
-        app:layout_constraintStart_toStartOf="@id/btn_image_ktp"
-        app:layout_constraintTop_toTopOf="@id/btn_image_ktp"
-        app:layout_constraintEnd_toEndOf="@id/btn_image_ktp"
-        app:layout_constraintBottom_toBottomOf="@id/btn_image_ktp" />
-
     <Button
         android:id="@+id/btn_add"
         android:layout_width="match_parent"
@@ -187,7 +209,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_image_ktp"
+        app:layout_constraintTop_toBottomOf="@id/btn_image_profile"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ProgressBar

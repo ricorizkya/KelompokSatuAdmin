@@ -47,4 +47,9 @@
     <string name="rp">Rp</string>
     <string name="_1000000">1000000</string>
     <string name="koma">,-</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="umur">Umur</string>
+    <string name="motto">Motto</string>
 </resources>

@@ -6,19 +6,21 @@ class Guide {
     var nomorGuide: String? = null
     var emailGuide: String? = null
     var alamatGuide: String? = null
-//    var ktpGuide: String? = null
+    var umur: String? = null
     var fotoGuide: String? = null
+    var motto: String? = null
 
     constructor() { }
 
-    constructor(id: String?, namaGuide: String?, nomorGuide: String?, emailGuide: String?, alamatGuide: String?, fotoGuide: String?) {
+    constructor(id: String?, namaGuide: String?, nomorGuide: String?, emailGuide: String?, alamatGuide: String?, umur: String?, fotoGuide: String?, motto: String?) {
         this.id = id
         this.namaGuide = namaGuide
         this.nomorGuide = nomorGuide
         this.emailGuide = emailGuide
         this.alamatGuide = alamatGuide
-//        this.ktpGuide = ktpGuide
+        this.umur = umur
         this.fotoGuide = fotoGuide
+        this.motto = motto
     }
 
 }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import android.widget.Toast
 import com.example.kelompoksatuadmin.R
 import com.example.kelompoksatuadmin.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -17,13 +18,13 @@ import com.google.firebase.auth.GoogleAuthProvider
 
 class LoginActivity : AppCompatActivity() {
 
-    companion object {
-        private const val RC_SIGN_IN = 120
-    }
+//    companion object {
+//        private const val RC_SIGN_IN = 120
+//    }
 
     private lateinit var binding: ActivityLoginBinding
-    private lateinit var auth: FirebaseAuth
-    private lateinit var googleSignInClient: GoogleSignInClient
+//    private lateinit var auth: FirebaseAuth
+//    private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,55 +34,50 @@ class LoginActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         binding.progressCircular.visibility = View.INVISIBLE
 
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build()
-
-        googleSignInClient = GoogleSignIn.getClient(this, gso)
-        auth = FirebaseAuth.getInstance()
+//        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                .requestIdToken(getString(R.string.default_web_client_id))
+//                .requestEmail()
+//                .build()
+//
+//        googleSignInClient = GoogleSignIn.getClient(this, gso)
+//        auth = FirebaseAuth.getInstance()
 
         binding.btnLogin.setOnClickListener {
-            btnLogin(binding.btnLogin)
+            login()
+        }
+    }
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if (requestCode == RC_SIGN_IN) {
+//            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+//            val exception = task.exception
+//            if (task.isSuccessful) {
+//                try {
+//                    val account = task.getResult(ApiException::class.java)!!
+//                    Log.d("LoginActivity", "firebaseAuthWithGoogle: "+account.id)
+//                    firebaseAuthWithGoogle(account.idToken!!)
+//                }catch (e: ApiException) {
+//                    Log.w("LoginActivity", "GoogleSignInFailed", e)
+//                }
+//            }else {
+//                Log.w("Loginctivity", exception.toString())
+//            }
+//        }
+//    }
+
+    private fun login() {
+        if (binding.edtUsername.text.toString() == "admin" && binding.edtPassword.text.toString() == "kelompoksatu") {
             binding.progressCircular.visibility = View.VISIBLE
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }else {
+            Toast.makeText(applicationContext, "Username/Password Salah! Silahkan Coba Lagi", Toast.LENGTH_SHORT).show()
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == RC_SIGN_IN) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            val exception = task.exception
-            if (task.isSuccessful) {
-                try {
-                    val account = task.getResult(ApiException::class.java)!!
-                    Log.d("LoginActivity", "firebaseAuthWithGoogle: "+account.id)
-                    firebaseAuthWithGoogle(account.idToken!!)
-                }catch (e: ApiException) {
-                    Log.w("LoginActivity", "GoogleSignInFailed", e)
-                }
-            }else {
-                Log.w("Loginctivity", exception.toString())
-            }
-        }
-    }
-
-    private fun firebaseAuthWithGoogle(idToken: String) {
-        val credential = GoogleAuthProvider.getCredential(idToken, null)
-        auth.signInWithCredential(credential)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        Log.d("LoginActivity", "signInWithCredential: Succeess")
-                        startActivity(Intent(this, MainActivity::class.java))
-                        finish()
-                    }else {
-                        Log.d("LoginActivity", "signInWithCredential: Failure", task.exception)
-                    }
-                }
-    }
-
-    fun btnLogin(view: View) {
-        val signInIntent = googleSignInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
-    }
+//    fun btnLogin(view: View) {
+//        val signInIntent = googleSignInClient.signInIntent
+//        startActivityForResult(signInIntent, RC_SIGN_IN)
+//    }
 }

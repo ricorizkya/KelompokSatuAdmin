@@ -12,7 +12,6 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.kelompoksatuadmin.activity.MainActivity
 import com.example.kelompoksatuadmin.databinding.ActivityTambahGuideBinding
 import com.example.kelompoksatuadmin.guide.model.Guide
 import com.google.firebase.database.FirebaseDatabase
@@ -58,11 +57,21 @@ class TambahGuideActivity : AppCompatActivity() {
     }
 
     private fun tambahGuide(imageProfil: String) {
-        if (binding.edtNamaGuide.text.toString().isEmpty() && binding.edtNomorGuide.text.toString().isEmpty() && binding.edtEmailGuide.text.toString().isEmpty() && binding.edtAlamatGuide.text.toString().isEmpty() && imageProfil.isEmpty()) {
-            binding.edtNamaGuide.error = "Form tidak boleh kosong"
-            binding.edtNomorGuide.error = "Form tidak boleh kosong"
-            binding.edtEmailGuide.error = "Form tidak boleh kosong"
-            binding.edtAlamatGuide.error = "Form tidak boleh kosong"
+        if (binding.edtNamaGuide.text.toString().isEmpty() &&
+            binding.edtNomorGuide.text.toString().isEmpty() &&
+            binding.edtEmailGuide.text.toString().isEmpty() &&
+            binding.edtNomorGuide.text.toString().isEmpty() &&
+            binding.edtAlamatGuide.text.toString().isEmpty() &&
+            binding.edtMotoGuide.text.toString().isEmpty() &&
+            imageProfil.isEmpty()) {
+
+                binding.edtNamaGuide.error = "Form tidak boleh kosong"
+                binding.edtNomorGuide.error = "Form tidak boleh kosong"
+                binding.edtEmailGuide.error = "Form tidak boleh kosong"
+                binding.edtNomorGuide.error = "Form tidak boleh kosong"
+                binding.edtAlamatGuide.error = "Form tidak boleh kosong"
+                binding.edtMotoGuide.error = "Form tidak boleh kosong"
+
             return Toast.makeText(applicationContext, "Form tidak boleh kosong", Toast.LENGTH_SHORT).show()
         }
 
@@ -73,8 +82,10 @@ class TambahGuideActivity : AppCompatActivity() {
                 binding.edtNamaGuide.text.toString(),
                 binding.edtNomorGuide.text.toString(),
                 binding.edtEmailGuide.text.toString(),
+                binding.edtNomorGuide.text.toString(),
                 binding.edtAlamatGuide.text.toString(),
-                imageProfil
+                imageProfil,
+                binding.edtMotoGuide.text.toString(),
         )
 
         if (guideId != null) {
